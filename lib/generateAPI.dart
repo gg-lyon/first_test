@@ -7,7 +7,7 @@ Future<NumberOutput> fetchNumberGenerator() async {
 
   if (response.statusCode == 200) {
 
-    return NumberOutput.fromJson(jsonDecode(response.body));
+    return NumberOutput.fromJson(jsonDecode(response.body)[0]);
   } else {
 
     throw Exception('Failed to load album');
